@@ -1,0 +1,19 @@
+﻿qid_label,h_person_bits,i_struct_empirical_bits,assumed_i_style_bits_per_ticket,n_certificate_horizon,interpretation
+T2_plus_l2,6.684661199457825,6.331202768334714,0.01,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T2_plus_l2,6.684661199457825,6.331202768334714,0.05,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T2_plus_l2,6.684661199457825,6.331202768334714,0.1,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T2_plus_l2,6.684661199457825,6.331202768334714,0.25,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T2_plus_l2,6.684661199457825,6.331202768334714,0.5,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T2_plus_l2,6.684661199457825,6.331202768334714,1.0,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T3_plus_person_recur_bin,6.684661199457825,6.596684659868382,0.01,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T3_plus_person_recur_bin,6.684661199457825,6.596684659868382,0.05,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T3_plus_person_recur_bin,6.684661199457825,6.596684659868382,0.1,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T3_plus_person_recur_bin,6.684661199457825,6.596684659868382,0.25,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T3_plus_person_recur_bin,6.684661199457825,6.596684659868382,0.5,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T3_plus_person_recur_bin,6.684661199457825,6.596684659868382,1.0,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T4_plus_text_place,6.684661199457825,6.684661199457825,0.01,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T4_plus_text_place,6.684661199457825,6.684661199457825,0.05,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T4_plus_text_place,6.684661199457825,6.684661199457825,0.1,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T4_plus_text_place,6.684661199457825,6.684661199457825,0.25,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T4_plus_text_place,6.684661199457825,6.684661199457825,0.5,0,Fano lower-bound horizon; not a successful re-identification threshold.
+T4_plus_text_place,6.684661199457825,6.684661199457825,1.0,0,Fano lower-bound horizon; not a successful re-identification threshold.

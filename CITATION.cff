@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the associated manuscript."
+title: "Privacy-Risk Engineering for Secure Municipal Service Data Release: Structural Linkage Grading and Comparative Controls"
+authors:
+  - family-names: Zhang
+    given-names: Lei
+date-released: "2026-06-20"
+type: software
+license: "NOASSERTION"
