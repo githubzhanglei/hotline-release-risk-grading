@@ -22,17 +22,22 @@ example_outputs/
   *.csv, *.md                               # outputs regenerated from the synthetic sample
 metadata/
   data_schema.md                            # field-level schema notes
-  public_311_boundary_note.md               # why public 311 scripts are not in this v1 package
+  paper_artifact_mapping.md                 # manuscript-to-script/output mapping
+  public_311_boundary_note.md               # public 311 demo boundary
   security_scan_report_20260620.md          # local leak-scan record
   release_manifest_20260620.md              # file inventory and checksums
 scripts/
+  run_all_demo.py
   make_synthetic_sample.py
   analyze_privacy_reidentification_risk.py
   evaluate_standard_anonymization_baselines.py
   evaluate_relation_key_release_controls.py
+  evaluate_public_311_demo.py
   simulate_synthetic_linkage_attack.py
   evaluate_synthetic_linkage_seed_sensitivity.py
   privacy_utils.py
+tests/
+  smoke_test.py
 requirements.txt
 ```
 
@@ -44,23 +49,31 @@ Create an environment with Python 3.10 or later, then install the small dependen
 pip install -r requirements.txt
 ```
 
-Regenerate the synthetic sample:
+Run the offline synthetic-data workflow:
 
 ```bash
-python scripts/make_synthetic_sample.py
+python scripts/run_all_demo.py
 ```
 
-Run the aggregate metric and comparator scripts:
+Run a smoke test for the same workflow:
 
 ```bash
-python scripts/analyze_privacy_reidentification_risk.py --skip-stylometry
-python scripts/evaluate_standard_anonymization_baselines.py
-python scripts/evaluate_relation_key_release_controls.py
-python scripts/simulate_synthetic_linkage_attack.py
-python scripts/evaluate_synthetic_linkage_seed_sensitivity.py
+python tests/smoke_test.py
 ```
 
 All commands write aggregate-only outputs to `example_outputs/`.
+
+Optionally run the public NYC 311 demo. This step uses the NYC open-data API and writes aggregate metrics only:
+
+```bash
+python scripts/evaluate_public_311_demo.py
+```
+
+Or include it in the one-command demo:
+
+```bash
+python scripts/run_all_demo.py --include-public-311
+```
 
 ## What This Package Can Reproduce
 
@@ -74,8 +87,11 @@ This package reproduces the **workflow mechanics**:
 - relation-key suppression/generalization controls;
 - synthetic auxiliary-fact linkage simulation;
 - deterministic seed-sensitivity checks.
+- an aggregate-only public NYC 311 structural demo.
 
 It does not reproduce the manuscript's restricted-corpus values because the original 12345 records cannot be redistributed.
+
+For a paper-to-repository mapping, see `metadata/paper_artifact_mapping.md`.
 
 ## Restricted Data Boundary
 
@@ -90,9 +106,11 @@ The manuscript's local corpus contains sensitive municipal-service records and i
 
 Only synthetic rows and aggregate example outputs are included.
 
-## Public 311 / Open311 Checks
+## Public 311 / Open311 Demo
 
-The manuscript also reports adjacent portability checks on public 311/Open311-style data. The original local workspace contains many exploratory and round-specific public-data scripts. To avoid publishing process traces, this v1 reproducibility package does not include those scripts. The corresponding public-data logic is summarized in `metadata/public_311_boundary_note.md`. A clean standalone public-311 checker can be added in a later release if needed.
+The manuscript also reports adjacent portability checks on public 311/Open311-style data. This repository includes a clean public NYC 311 demo in `scripts/evaluate_public_311_demo.py`.
+
+The demo fetches a small fixed-window sample from the NYC 311 public API, computes structural grouping metrics, and exports only aggregate tables. It does not store raw 311 rows, addresses, or row-level candidate lists. The historical exploratory public-311 scripts from the local workspace are intentionally excluded.
 
 ## License
 

@@ -1,0 +1,7 @@
+﻿city,scenario,qid_columns,records,target_locations,qid_groups,pct_records_k1,median_k_records,map_location_linkage,h_location_bits,h_location_given_q_bits,i_struct_location_bits,effective_location_candidates
+NYC,citywide,<none>,1000,782,1,0.0,1000.0,0.027,9.363662113108969,9.363662113108969,0.0,658.7841857708977
+NYC,borough_week_type,borough + week_start + complaint_type,1000,782,156,0.059,20.0,0.236,9.363662113108969,3.588024458961381,5.775637654147588,12.025495698963148
+NYC,zip_week_type,incident_zip + week_start + complaint_type,1000,782,586,0.382,2.0,0.713,9.363662113108969,0.7732463581941166,8.590415754914853,1.7091113089609948
+NYC,zip_week_type_status,incident_zip + week_start + complaint_type + status,1000,782,586,0.382,2.0,0.713,9.363662113108969,0.7732463581941166,8.590415754914853,1.7091113089609948
+NYC,zip_day_type_descriptor,incident_zip + day + complaint_type + descriptor,1000,782,721,0.562,1.0,0.817,9.363662113108969,0.4723392367361906,8.891322876372778,1.3873571553111566
+NYC,relation_key_released,incident_zip + week_start + complaint_type + location_key,1000,782,859,0.758,1.0,1.0,9.363662113108969,0.0,9.363662113108969,1.0

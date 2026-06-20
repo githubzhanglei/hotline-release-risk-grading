@@ -2,13 +2,17 @@
 
 The manuscript includes adjacent portability checks using public 311/Open311-style fields from large-city open-data portals. Those checks are conceptually separate from the restricted local 12345 corpus.
 
-This first public reproducibility package does **not** include the local workspace's exploratory public-311 scripts because that workspace contains many round-specific process scripts, intermediate certificates, and development traces. Publishing those files would make the repository harder to audit and could introduce draft-process leakage.
+This repository includes a clean public-data demo:
 
-The public-311 component can be reproduced cleanly in a later release with a standalone script that:
+```bash
+python scripts/evaluate_public_311_demo.py
+```
 
-1. reads public records from city open-data APIs or downloaded CSV files;
-2. maps common fields such as date, administrative area, service category, status, and location surrogate;
-3. computes the same aggregate structural metrics used by the main scripts;
-4. exports only aggregate tables.
+The demo fetches a small fixed-window sample from the NYC 311 public API, maps common fields such as date, area, service type, status, and public location surrogate, and computes aggregate structural metrics. It writes:
 
-The v1 repository therefore focuses on the restricted-corpus metric workflow, standard anonymization comparators, relation-key controls, and synthetic auxiliary-linkage simulation, all using a fully synthetic sample.
+- `example_outputs/public_311_nyc_structural_demo.csv`
+- `example_outputs/public_311_nyc_structural_demo_summary.md`
+
+The script does not write raw 311 rows, raw addresses, or row-level candidate lists.
+
+The local workspace also contains many exploratory and round-specific public-311 scripts. Those files are intentionally excluded because they contain process traces and are not needed for a clean reproducibility package.
