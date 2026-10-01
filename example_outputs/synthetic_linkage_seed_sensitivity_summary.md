@@ -1,6 +1,6 @@
 # Synthetic T-Linkage Seed Sensitivity
 
-Date: 2026-06-20
+Date: 2026-09-30
 
 Purpose: test whether the leave-one-ticket-out repeated-person linkage results depend on a single auxiliary-ticket sampling seed.
 

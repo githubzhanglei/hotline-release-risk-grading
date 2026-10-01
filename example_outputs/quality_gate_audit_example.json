@@ -1,0 +1,66 @@
+{
+  "snapshot_id": "synthetic-hotline-400",
+  "code_version": "sha256:5e6fc03b2ac9aae5cda449df791e1d6dc234c9447bca92a08858a450a7b0bfe2",
+  "candidate_sha256": "84545171355925753c693d2fa48c584d6dbf9fcccdcbdd53ba10d71d65a10c6d",
+  "parameters": {
+    "k": 5,
+    "declared_qid_sets": [
+      [
+        "mapped_l1_name"
+      ],
+      [
+        "mapped_l2_name"
+      ]
+    ],
+    "delivered_qid_union": [
+      "mapped_l1_name",
+      "mapped_l2_name"
+    ],
+    "minimum_retention": 0.5,
+    "expected_column_hash": null,
+    "missing_values": "Blank/whitespace fields are an explicit tagged category; no rows are dropped."
+  },
+  "n_in": 400,
+  "n_out": 400,
+  "record_retention": 1.0,
+  "columns": [
+    "sample_id",
+    "ticket_date",
+    "person_id",
+    "区县地址",
+    "街道地址",
+    "mapped_l1_name",
+    "mapped_l2_name",
+    "是否回访",
+    "问题是否解决",
+    "是否热点",
+    "承办单位",
+    "text_subject_id",
+    "text_subject_type",
+    "text_place_id",
+    "text_place_type",
+    "address_id",
+    "has_address_id",
+    "has_text_place_id",
+    "has_text_subject_id",
+    "sanitized_text",
+    "person_total_complaints",
+    "address_total_complaints"
+  ],
+  "column_sha256": "b575a7127f182847994177863e4ce3242f94cee5d646c9b0dedee231a4cec84c",
+  "column_review_required": false,
+  "group_count": 8,
+  "minimum_group_size": 37,
+  "groups_below_k": 0,
+  "records_below_k": 0,
+  "singleton_count": 0,
+  "automated_decision": "PASS",
+  "reasons": [
+    "Declared group-size and coverage checks passed; human authorization is still required."
+  ],
+  "human_authorization": {
+    "approved_by": null,
+    "approved_at": null,
+    "decision": null
+  }
+}

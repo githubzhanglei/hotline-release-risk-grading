@@ -1,6 +1,6 @@
 # Relation-key Release Control Sweep
 
-Date: 2026-06-20
+Date: 2026-09-30
 
 Privacy unit: pseudonymous `person_id`.
 Controls suppress relation-key values whose empirical person-diversity is below a threshold.

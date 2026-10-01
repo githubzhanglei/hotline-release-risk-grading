@@ -1,6 +1,6 @@
 # Safe Synthetic T-Linkage Simulation
 
-Date: 2026-06-20
+Date: 2026-09-30
 
 No external identity-bearing data are used. Each auxiliary row is a synthetic known-fact record sampled from one pseudonymous person's ticket history.
 The result quantifies joinability and candidate-set collapse, not real-world legal identity recovery.

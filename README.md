@@ -106,6 +106,36 @@ The manuscript's local corpus contains sensitive municipal-service records and i
 
 Only synthetic rows and aggregate example outputs are included.
 
+## Independent Export Quality Gate
+
+The ERX companion workflow is described in **A field-level privacy quality gate
+for municipal service data release: k-anonymity screening evaluated on a Chinese
+12345 hotline system**. Its executable reference check is separate from the
+candidate-file generator:
+
+```bash
+python scripts/quality_gate.py --candidate data_sample/synthetic_hotline_sample.csv --qid-set mapped_l1_name --qid-set mapped_l2_name --n-in 400 --snapshot-id synthetic-hotline-400 --k 5 --minimum-retention 0.5 --audit example_outputs/quality_gate_audit_example.json
+python -m unittest discover -s tests -p 'test_*.py' -v
+```
+
+The example has 400 synthetic records; the declared union of the two topic
+fields has no group below five records. The audit reports `PASS`, but the human
+authorization fields remain blank. The parameters are demonstration choices,
+not a recommendation to publish a real candidate with those fields.
+
+The validator reads the actual delivery, checks the union of every declared
+quasi-identifier set, includes missing values as an explicit category, and binds
+the audit to the complete column list and file SHA256. Pass an earlier
+`--expected-column-hash` to detect a changed delivery schema and require a new
+review. Empty files and insufficient record coverage fail even if they contain
+no singleton. Boundary tests also cover separate field sets that pass while
+their union fails. No record values or small-group details appear in the audit.
+
+The reference implementation is evaluated on synthetic files and is not a
+production deployment or a legal anonymization certification. Restricted-corpus
+bookkeeping and private manuscript revision files are excluded. See
+`metadata/erx_quality_gate.md` for the version and reproducibility boundary.
+
 ## Public 311 / Open311 Demo
 
 The manuscript also reports adjacent portability checks on public 311/Open311-style data. This repository includes a clean public NYC 311 demo in `scripts/evaluate_public_311_demo.py`.

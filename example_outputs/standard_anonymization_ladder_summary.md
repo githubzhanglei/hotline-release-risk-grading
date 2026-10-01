@@ -1,6 +1,6 @@
 # Standard Anonymization Ladder Baselines
 
-Date: 2026-06-20
+Date: 2026-09-30
 
 Purpose: compare the relation-key controls against conventional recoding and k-anonymity-style row suppression baselines.
 Row suppression metrics are evaluated only on retained person records; utility must therefore be read together with retained record percentage.
