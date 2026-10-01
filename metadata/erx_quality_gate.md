@@ -1,6 +1,6 @@
 # ERX Quality-Gate Reference Implementation
 
-Version label: `v1.0-erx`.
+Version label: `v1.0.1-erx` (the `v1.0-erx` validator and tests, unchanged, with the MIT license added).
 
 The independent validator is `scripts/quality_gate.py`; its boundary tests are
 `tests/test_quality_gate.py`. It reads a delivered structured CSV rather than

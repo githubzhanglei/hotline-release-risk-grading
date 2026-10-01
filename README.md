@@ -1,8 +1,16 @@
-# Privacy-Risk Engineering Reproducibility Package
+# Field-Level Privacy Quality Gate: Reproducibility Package
 
 This repository contains a public, non-sensitive reproducibility package for:
 
-**Privacy-Risk Engineering for Secure Municipal Service Data Release: Structural Linkage Grading and Comparative Controls**
+**A field-level privacy quality gate for municipal service data release: k-anonymity screening evaluated on a Chinese 12345 hotline system**
+
+The package was first prepared for an earlier version of the study; those materials are retained unchanged. For the current manuscript, the most relevant components are:
+
+- `scripts/quality_gate.py` and `tests/test_quality_gate.py`: the independent export validator and its boundary tests (manuscript Section 2.6 and Algorithm 1; see `metadata/erx_quality_gate.md`);
+- `scripts/analyze_privacy_reidentification_risk.py`: singleton rate, MAP pseudonym linkage and effective-candidate diagnostics for declared field combinations;
+- `scripts/evaluate_standard_anonymization_baselines.py` and `scripts/evaluate_relation_key_release_controls.py`: demonstrations of fixed suppression policies and relation-key controls on the synthetic sample.
+
+The public NYC 311 demo and the synthetic linkage simulation belong to the earlier version and are not reported in the current manuscript.
 
 The restricted Chinese 12345 municipal-service corpus used in the manuscript is **not** included. This package provides:
 
@@ -138,13 +146,13 @@ bookkeeping and private manuscript revision files are excluded. See
 
 ## Public 311 / Open311 Demo
 
-The manuscript also reports adjacent portability checks on public 311/Open311-style data. This repository includes a clean public NYC 311 demo in `scripts/evaluate_public_311_demo.py`.
+An earlier version of the study reported adjacent portability checks on public 311/Open311-style data. This repository retains a clean public NYC 311 demo in `scripts/evaluate_public_311_demo.py`.
 
 The demo fetches a small fixed-window sample from the NYC 311 public API, computes structural grouping metrics, and exports only aggregate tables. It does not store raw 311 rows, addresses, or row-level candidate lists. The historical exploratory public-311 scripts from the local workspace are intentionally excluded.
 
 ## License
 
-No open-source license has been selected yet. Until the author adds a formal license file, the materials are provided for scholarly inspection and reproducibility review only.
+This repository is released under the MIT License; see `LICENSE`. It contains code, a fully synthetic sample, and aggregate outputs only; no real municipal-service records are included.
 
 ## Citation
 

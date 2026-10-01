@@ -1,5 +1,7 @@
 # Paper-to-Repository Mapping
 
+This mapping was prepared for an earlier version of the manuscript. The README lists the components used by the current manuscript.
+
 This table links the manuscript components to the public repository artifacts. Restricted-corpus values in the manuscript cannot be exactly reproduced from this repository because the original Chinese 12345 corpus cannot be redistributed. The public repository instead supports workflow inspection, script execution, and aggregate-only demonstrations.
 
 | Manuscript component | Repository script | Public input | Public output |

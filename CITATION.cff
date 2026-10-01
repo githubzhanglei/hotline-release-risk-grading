@@ -1,9 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this reproducibility package, please cite the associated manuscript."
-title: "Privacy-Risk Engineering for Secure Municipal Service Data Release: Structural Linkage Grading and Comparative Controls"
+title: "Reproducibility package for: A field-level privacy quality gate for municipal service data release: k-anonymity screening evaluated on a Chinese 12345 hotline system"
 authors:
   - family-names: Zhang
     given-names: Lei
-date-released: "2026-06-20"
+    orcid: "https://orcid.org/0009-0001-8601-6374"
+version: "v1.0.1-erx"
+date-released: "2026-10-01"
 type: software
-license: "NOASSERTION"
+license: MIT
+repository-code: "https://github.com/githubzhanglei/hotline-release-risk-grading"
